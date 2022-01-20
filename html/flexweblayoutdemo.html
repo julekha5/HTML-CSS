@@ -1,0 +1,160 @@
+<!doctype html>
+<title>Flex-Web-Layout-demo</title>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    body {
+        display: flex;
+        min-height: auto;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .outer-col-1 {
+        background: gold;
+        flex: 1;
+        font-weight: bold;
+    }
+
+    .outer-col-2 {
+        display: flex;
+        flex-direction: column;
+        flex: 5;
+    }
+
+    .inner-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .inner-col {
+        flex: 4;
+    }
+
+    .inner-row article {
+        min-height: 60vh;
+    }
+
+    .inner-row aside {
+        background: beige;
+        flex: 1;
+    }
+
+    header,
+    footer {
+        background: yellowgreen;
+        height: 10vh;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+        padding: 10px;
+    }
+
+    .headerContainer{
+    display:flex;
+    flex-flow: column wrap;
+    align-content:center;
+    background-color: tomato;
+    font-weight:bold;
+    font-size: larger;
+}
+
+.mainContainer{
+    display: flex;
+    flex-flow:row wrap;
+    font-weight:bold;
+    text-align: center;
+}
+
+.mainContentItem{
+    text-align :left;
+    background:#000;
+}
+
+article{
+    margin:10px;
+    background:antiquewhite;
+    line-height: 1.5;
+    font-size: large;
+}
+article,h2{
+    color:midnightblue
+}
+article,p{
+    color:brown;
+}
+
+.footerContainer{
+    display:flex;
+    flex-flow:column wrap;
+    align-content:center;
+    background: crimson;
+    font-weight:bold;
+}
+    
+</style>
+
+<body >
+    <nav class="outer-col-1">Nav</nav>
+    <div class="outer-col-2">
+        <header class="headerContainer">
+            HEADER - Sample Flexbox Example
+        </header>
+        <div class="inner-row mainContainer">
+            <div class="inner-col mainContentItem">
+                <article>
+                    <h2>HTML</h2>
+                    <p>
+                        HTML stands for HyperText Markup Language. "Markup language" means that,
+                        rather than using a programming language to perform functions,
+                        HTML uses tags to identify different types of content and the purposes they each serve to the
+                        webpage.
+                        Using HTML, you can add headings, format paragraphs, control line breaks, make lists, emphasize
+                        text,
+                        create special characters, insert images, create links, build tables, control some styling, and
+                        much more.
+                    </p>
+                </article>
+                <article>
+                    <h2>CSS</h2>
+                    <p>
+                        CSS stands for Cascading Style Sheets. This programming language dictates how the HTML elements
+                        of a website
+                        should actually appear on the frontend of the page.CSS was invented and released in 1996: All
+                        formatting could be removed from
+                        HTML documents and stored in separate CSS (.css) files.
+                        So, what exactly does CSS stand for? It stands for Cascading Style Sheets -- and "style sheet"
+                        refers to the document itself.
+                        Ever web browser has a default style sheet, so every web page out there is affected by at least
+                        one style sheet -- the default
+                        style sheet of whatever browser the web page visitor is using -- regardless whether or not the
+                        web designer applies any styles.
+                    </p>
+                </article>
+                <article>
+                    <h2>JavaScript</h2>
+                    <p>
+                        JavaScript is a logic-based programming language that can be used to modify website content and
+                        make it behave in different ways in response to a user's actions.
+                        Common uses for JavaScript include confirmation boxes, calls-to-action, and adding new
+                        identities to existing information.
+                        In short, JavaScript is a programming language that lets web developers design interactive
+                        sites. Most of the dynamic behavior you'll see on a web page is thanks to JavaScript, which
+                        augments a browser's default controls and behaviors.
+                    </p>
+                </article>
+                <footer class="footerContainer">Footer</footer>
+            </div>
+            <aside class="sideBarItem sideBarRightItem">
+                Right SideBar
+            </aside>
+        </div>
+    </div>
+</body>
